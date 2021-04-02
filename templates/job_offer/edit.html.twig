@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'job_offer.edit.title'|trans }}{% endblock %}
+
+{% block body %}
+    <h1>{{ 'job_offer.edit.title'|trans }}</h1>
+
+    {{ include('job_offer/_form.html.twig', {'button_label': 'job_offer.form.update.label' | trans}) }}
+
+    <a href="{{ path('job_offer_index') }}">{{ 'app.actions.back_to_list.label'|trans }}</a>
+
+    {{ include('job_offer/_delete_form.html.twig') }}
+{% endblock %}

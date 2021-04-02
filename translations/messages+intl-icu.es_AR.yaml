@@ -1,0 +1,64 @@
+app.title: 'Bolsa de empleo'
+app.logout: Salir
+app.login: Ingresar
+app.signin.form.title: 'Por favor ingrese'
+app.signin.form.email.label: Correo
+app.signin.form.password.label: Contraseña
+app.signin.form.signin.label: Ingresar
+applicant.job_offers.index.title: 'Ofertas disponibles'
+applicant.job_offers.index.table.title: 'Ofertas disponibles'
+applicant.job_offers.index.table.header.offer.title: Puesto
+applicant.job_offers.index.table.header.offer.company: Empresa
+applicant.job_offers.index.offer.apply: Solicitar
+applicant.offer.apply.title: 'Estás solicitando el puesto de "{title}"'
+applicant.application.form.name.label: Nombre
+applicant.application.form.email.label: Correo
+applicant.application.form.birthdate.label: 'Fecha de nacimiento'
+applicant.application.form.submit.label: Enviar
+applicant.application.submit.success: 'Su postulación ha sido enviada'
+company.application.email.new_applicant.subject: '¡Nuevo postulante!'
+company.job_offer.show.title: Oferta
+company.job_offer.show.offer.title: Puesto
+company.job_offer.show.actions.delete.confirm: '¿Está seguro de eliminar este elemento?'
+company.job_offer.show.actions.delete.button: Eliminar
+company.job_offer.index.title: 'Ofertas publicadas'
+company.job_offer.index.table.header.title: Puesto
+company.job_offer.index.table.body.actions.show: Ver
+company.job_offer.index.table.body.actions.edit: Editar
+company.job_offer.index.actions.create: Nueva
+job_offer.new.title: 'Nueva oferta'
+app.actions.back_to_list.label: 'Volver al listado'
+company.job_offer.show.actions.back: Volver
+company.job_offer.show.actions.edit: Editar
+job_offer.edit.title: 'Editar oferta'
+app.user.loggedin: 'Logeado como {user}'
+company.create.title: 'Nueva empresa'
+app.signin.new_company: '¿Nueva empresa?'
+app.register.link.label: 'Haga click aquí para registrarse'
+app.register.title: Registro
+app.register.form.submit.label: Confirmar
+app:
+  register:
+    form:
+      email:
+        label: Correo
+      agree_terms:
+        label: 'Acepta términos y condiciones'
+      plain_password:
+        label: Contraseña
+  no_records: 'No hay ningún dato'
+company:
+  create:
+    form:
+      name:
+        label: Nombre
+      submit:
+        label: Confirmar
+job_offer:
+  form:
+    title:
+      label: Puesto
+    save:
+      label: Guardar
+    update:
+      label: Guardar

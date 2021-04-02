@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{'applicant.job_offers.index.title'|trans}}{% endblock %}
+
+{% block body %}
+    {% if offers %}
+        <h2>{{ 'applicant.job_offers.index.table.title'|trans }}</h2>
+        <table class="table table-responsive table-striped">
+            <thead>
+                <tr>
+                    <th>{{ 'applicant.job_offers.index.table.header.offer.title'|trans }}</th>
+                    <th>{{ 'applicant.job_offers.index.table.header.offer.company'|trans }}</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for offer in offers %}
+                <tr>
+                    <td>{{ offer.title }}</td>
+                    <td>{{ offer.company }}</td>
+                    <td><a href="{{ url('offer_apply', { id: offer.id }) }}">{{ 'applicant.job_offers.index.offer.apply' | trans}}</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <h2>There are currently no available job offers :(</h2>
+    {% endif %}
+{% endblock %}

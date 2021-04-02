@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'company.job_offer.index.title'|trans }}{% endblock %}
+
+{% block body %}
+    <h1>{{ 'company.job_offer.index.title'|trans }}</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>{{ 'company.job_offer.index.table.header.title' | trans}}</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for job_offer in job_offers %}
+            <tr>
+                <td>{{ job_offer.id }}</td>
+                <td>{{ job_offer.title }}</td>
+                <td>
+                    <a href="{{ path('job_offer_show', {'id': job_offer.id}) }}">{{ 'company.job_offer.index.table.body.actions.show'|trans }}</a>
+                    <a href="{{ path('job_offer_edit', {'id': job_offer.id}) }}">{{ 'company.job_offer.index.table.body.actions.edit'|trans }}</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">{{ 'app.no_records'|trans }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('job_offer_new') }}">{{ 'company.job_offer.index.actions.create'|trans }}</a>
+{% endblock %}
