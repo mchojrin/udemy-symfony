@@ -9,12 +9,10 @@ use Symfony\Component\Routing\Annotation\Route;
 class HomeController extends AbstractController
 {
     /**
-     * @Route("/", name="home")
+     * @Route("/{vueRouting}", name="home")
      */
-    public function index(JobOfferRepository $jobOfferRepository)
+    public function index()
     {
-        return $this->render('home/index.html.twig', [
-            'offers' => $jobOfferRepository->findAll(),
-        ]);
+        return $this->render('base.html.twig');
     }
 }
